@@ -1,0 +1,87 @@
+.card-wr {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  animation-duration: 0.2s !important;
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #222;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    border-radius: 0.5rem;
+  }
+  &::-webkit-scrollbar {
+    width: 1px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // background-color: $subColor;
+    background-color: #e7e7e7;
+    border-radius: 0.5rem;
+  }
+
+  &.ALL,
+  &.INTERACTIVE,
+  &.DIGITAL,
+  &.EXHIBITION,
+  &.FILM,
+  &.LAB {
+    .card {
+      -webkit-animation-name: show;
+      animation-name: show;
+      -webkit-animation-duration: 0.2s !important;
+      animation-duration: 0.2s !important;
+      > * {
+        -webkit-transition-delay: 0s !important;
+        -o-transition-delay: 0s !important;
+        transition-delay: 0s !important;
+        animation-duration: 0s !important;
+      }
+    }
+
+    @-webkit-keyframes show {
+      from {
+        opacity: 0;
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+      }
+
+      to {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+      }
+
+      to {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .scroll {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    // left: -1.3%;
+  }
+
+
+}

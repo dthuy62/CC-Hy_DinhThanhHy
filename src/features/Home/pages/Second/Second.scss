@@ -1,0 +1,78 @@
+@import "../../../../assets/styles/abstracts/variables";
+.second-page {
+  background-color: $background-color;
+  .second-container {
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+    .second-full-text {
+      position: absolute;
+      padding-left: 1vw;
+      top: -14%;
+      text-align: left;
+      line-height: 0.96;
+      font-weight: 600;
+      font-size: 281px;
+      color: $text-color;
+    }
+    .list-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      width: 25%;
+      user-select: none;
+    }
+
+    @media (max-width: 1024px) {
+      .second-full-text {
+        font-size: 161px;
+        top: 20%;
+        left: 5%;
+
+      }
+      .list-image {
+        width: 35%;
+      }
+
+    }
+    @media (max-width: 768px) {
+      .second-full-text {
+        font-size: 181px;
+      }
+      .list-image {
+        width: 35%;
+      }
+
+    }
+    @media (max-width: 568px) {
+      .second-full-text {
+        font-size: 151px;
+      }
+      .list-image {
+        width: 55%;
+
+      }
+
+    }
+    @media (max-width: 400px) {
+      .second-full-text {
+        font-size: 131px;
+      }
+      .list-image {
+        width: 35%;
+      }
+
+    }
+
+
+
+  }
+}
+@keyframes move {
+  0% { transform: translateY(-5px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(-5px); }
+}

@@ -1,0 +1,124 @@
+.card-pd {
+  width: 30%;
+  position: relative;
+  margin: 1%;
+  float: left;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+}
+.inner-flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  .contents-hide {
+    position: absolute;
+    z-index: 5;
+    -webkit-transition: all 0.2s !important;
+    -o-transition: all 0.2s !important;
+    transition: all 0.2s !important;
+    transition-delay: 0s !important;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    color: transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+
+    > * {
+      -webkit-transition: all 0s !important;
+      -o-transition: all 0s !important;
+      transition: all 0s;
+      transition-duration: 0s !important;
+      transition: all 0s !important;
+      transition-delay: 0s !important;
+    }
+  }
+
+  .contents-img {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+  }
+  transition: 400ms all;
+  &:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    .contents-hide {
+      height: 100%;
+      padding: 20px;
+      // background-color: rgba($color: #000000, $alpha: 0.5);
+      color: white;
+      .title {
+        white-space: normal;
+        text-overflow: inherit;
+        overflow: inherit;
+      }
+    }
+
+    .desc {
+      font-family: Montserrat-SemiBold;
+      font-size: 11px;
+      text-align: left;
+    }
+
+    .partners {
+      margin-top: 20px;
+      font-family: Montserrat-SemiBold;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .title {
+      font-family: Montserrat-Light;
+      font-size: 18px;
+      // margin-top: -10px;
+    }
+    cursor: pointer;
+  }
+
+  &:active {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+
+  .desc {
+    font-family: Montserrat-SemiBold;
+    font-size: 11px;
+    text-align: left;
+  }
+
+  .partners {
+    margin-top: 20px;
+    font-family: Montserrat-SemiBold;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .title {
+    font-family: Montserrat-Light;
+    font-size: 18px;
+    // margin-top: -10px;
+  }
+}

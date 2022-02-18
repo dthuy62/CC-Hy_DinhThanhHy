@@ -1,0 +1,131 @@
+@import "../../../../assets/styles/abstracts/variables";
+
+.third-page {
+  height: 100vh;
+  background-color: $background-color;
+
+  .third-page-container {
+    top: 0;
+    position: relative;
+    text-align: left;
+    height: 100%;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    z-index: 5;
+    justify-content: center;
+    .third-content {
+      display: flex;
+      height: 85%;
+      width: 88%;
+      position: relative;
+    }
+    @media (max-width: 1024px) {
+      .third-content {
+        flex-direction: column;
+        width: 70%;
+        top: 13%;
+        right: 2.5%;
+        .item {
+          width: 100%;
+          height: 15%;
+          .item-content {
+            .title {
+              font-size: 25px;
+
+            }
+            img, .title-hide {
+              display: none;
+            }
+            .desc {
+              width: 90%;
+              opacity: 0;
+            }
+          }
+        }
+        .item:hover {
+          height: 50%;
+          transform: scale(1) !important;
+          .desc {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @media (max-width: 840px) {
+      .third-content {
+        flex-direction: column;
+        width: 70%;
+        top: 13%;
+        right: 2.5%;
+        .item {
+          width: 100%;
+          height: 15%;
+          .item-content {
+            .title {
+              font-size: 25px;
+
+            }
+            img, .title-hide {
+              display: none;
+            }
+            .desc {
+              width: 90%;
+            }
+          }
+        }
+        .item:hover {
+          height: 50%;
+          transform: scale(1) !important;
+        }
+      }
+    }
+    @media (max-width: 987px) and (min-width: 840px) and (max-width: 987px) and (min-width: 840px) {
+      .third-content {
+        flex-direction: column;
+        width: 70%;
+        top: 13%;
+        right: 2.5%;
+        .item {
+          width: 100%;
+          height: 15%;
+          .item-content {
+            .title {
+              font-size: 25px;
+
+            }
+            img, .title-hide {
+              display: none;
+            }
+            .desc {
+              width: 90%;
+              opacity: 0;
+            }
+          }
+        }
+        .item:hover {
+          height: 50%;
+          transform: scale(1) !important;
+          .desc {
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+    @media (max-width: 1500px) {
+      .third-content {
+        .item {
+          .item-content {
+            .desc {
+              width: 80%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
